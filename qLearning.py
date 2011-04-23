@@ -47,7 +47,7 @@ def main():
   
   # ispis matrice Q      
   for red in Q:
-    print red
+    print '\t'.join(map(str, red))
   
   # racuna najbolji put
   put = []  
@@ -59,7 +59,7 @@ def main():
   # ispis puta
   print
   print 'Najkraci put'
-  print put
+  print ' -> '.join(map(str, put))
   
 if __name__=='__main__':
   main()
