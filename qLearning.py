@@ -41,7 +41,7 @@ def main():
     gamma = 0.8
   
     # Q learning
-    for i in range(1000):
+    for i in range(100):
         s = random.randint(0, kraj)
         while True:
             r = random.choice(dobri(R[s]))
