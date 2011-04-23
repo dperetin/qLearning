@@ -3,15 +3,16 @@
 import random
 import sys
 
+
 def dobri(red):
     ret = []
-    for i in range(0,len(red)):
+    for i in range(0, len(red)):
         if red[i] != float('-inf'):
             ret.append(i)
     return ret
 
+
 def main():
-  
     if len(sys.argv) != 4:
         print sys.argv[0], '<dat>', '<poc>', '<cilj>'
         print '\t<dat>  - ime datoteke u koju je spremljena ulazna matrica'
@@ -29,9 +30,9 @@ def main():
     R = [map(lambda x: float(x), s.split(',')) for s in cijeliFajl.split()]
       
     # inicijaliziram Q na 0
-    Q=[]
+    Q = []
     for red in R:
-        qr=[]
+        qr = []
         for broj in red:
             qr.append(0.0)
         Q.append(qr)
