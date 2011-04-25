@@ -1,0 +1,6 @@
+Zadatak:
+Izraditi osnovnu varijantu Q-learning algoritma, kao i generator problema – 
+zadan na principu matrica (mxn) sa slučajnim  generiranjem mogućih prijelaza 
+između polja, cilja i raspodjele vrijednosti nagrada (rewards).  
+Vidi kratki tutorial i primjer:
+http://people.revoledu.com/kardi/tutorial/ReinforcementLearning/index.html
