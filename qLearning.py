@@ -14,10 +14,10 @@ def dobri(red):
 
 def main():
     if len(sys.argv) != 4:
-        print sys.argv[0], '<dat>', '<poc>', '<cilj>'
-        print '\t<dat>  - ime datoteke u koju je spremljena ulazna matrica'
-        print '\t<poc>  - pocetni cvor, moze biti bilo koji'
-        print '\t<cilj> - ciljni cvor, mora biti u skladu s ulaznom matricom'
+        print sys.argv[0], 'dat', 'poc', 'cilj'
+        print '\tdat  - ime datoteke u koju je spremljena ulazna matrica'
+        print '\tpoc  - pocetni cvor, moze biti bilo koji'
+        print '\tcilj - ciljni cvor, mora biti u skladu s ulaznom matricom'
         sys.exit(1)
   
     filename = sys.argv[1]
@@ -54,7 +54,7 @@ def main():
     print    
     print 'Matrica Q:'  
     for red in Q:
-        print '\t'.join(map(lambda n: str(n)[:7], red))
+        print '\t'.join([str(n)[:7] for n in red])
   
     # racuna najbolji put
     put = []  
