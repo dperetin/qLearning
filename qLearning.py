@@ -41,7 +41,10 @@ def main():
     gamma = 0.8
   
     # Q learning
-    for i in range(1000):
+#for i in range(1000):
+    count = 0
+    while Q[kraj][kraj] != 500:   
+        count += 1
         s = random.randint(0, kraj)
         while True:
             r = random.choice(dobri(R[s]))
@@ -51,6 +54,7 @@ def main():
             s = r
   
     # ispis matrice Q
+    print count
     print    
     print 'Matrica Q:'  
     for red in Q:
