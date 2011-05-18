@@ -44,9 +44,9 @@ def main():
 #for i in range(1000):
     count = 0
     while Q[kraj][kraj] != 500:   
-        count += 1
         s = random.randint(0, kraj)
         while True:
+            count += 1
             r = random.choice(dobri(R[s]))
             Q[s][r] = R[s][r] + gamma * max(Q[r])
             if s == kraj: 
@@ -55,10 +55,10 @@ def main():
   
     # ispis matrice Q
     print count
-    print    
-    print 'Matrica Q:'  
-    for red in Q:
-        print '\t'.join([str(n)[:7] for n in red])
+#print    
+#   print 'Matrica Q:'  
+#   for red in Q:
+#       print '\t'.join([str(n)[:7] for n in red])
   
     # racuna najbolji put
     put = []  
