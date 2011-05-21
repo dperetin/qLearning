@@ -2,7 +2,7 @@
 
 import random
 import sys
-
+import math
 
 def dobri(red):
     ret = []
