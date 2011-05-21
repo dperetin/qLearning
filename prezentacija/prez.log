@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.4.21)  21 MAY 2011 14:02
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.4.21)  21 MAY 2011 21:55
 entering extended mode
  %&-line parsing enabled.
 **prez.tex
@@ -1065,11 +1065,27 @@ File: slike/pokraj.pdf Graphic file (type pdf)
 <use slike/pokraj.pdf> [27
 
  <./slike/pokraj.pdf>]
-<slike/put.pdf, id=779, 281.05pt x 332.43597pt>
+<slike/put.pdf, id=780, 281.05pt x 332.43597pt>
 File: slike/put.pdf Graphic file (type pdf)
  <use slike/put.pdf> [28
 
- <./slike/put.pdf>]
+ <./slike/put.pdf>] <slike/bench1.pdf, id=812, 289.08pt x 178.56712pt>
+File: slike/bench1.pdf Graphic file (type pdf)
+
+<use slike/bench1.pdf> [29
+
+ <./slike/bench1.pdf>]
+<slike/bench2.pdf, id=850, 289.08pt x 186.8079pt>
+File: slike/bench2.pdf Graphic file (type pdf)
+ <use slike/bench2.pdf>
+[30
+
+ <./slike/bench2.pdf>] <slike/bench3.pdf, id=882, 289.08pt x 186.8079pt>
+File: slike/bench3.pdf Graphic file (type pdf)
+
+<use slike/bench3.pdf> [31
+
+ <./slike/bench3.pdf>]
 \tf@nav=\write5
 \openout5 = `prez.nav'.
 
@@ -1086,10 +1102,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 8573 strings out of 256216
- 151125 string characters out of 1917072
+ 8600 strings out of 256216
+ 151509 string characters out of 1917072
  249372 words of memory out of 1500000
- 11522 multiletter control sequences out of 10000+200000
+ 11540 multiletter control sequences out of 10000+200000
  11764 words of font info for 43 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  41i,15n,51p,329b,558s stack positions out of 5000i,500n,6000p,200000b,15000s
@@ -1100,9 +1116,9 @@ e1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmss10.pfb></u
 sr/share/texmf/fonts/type1/bluesky/cm/cmss8.pfb></usr/share/texmf/fonts/type1/b
 luesky/cm/cmssi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr
 /share/texmf/fonts/type1/bluesky/latex-fonts/line10.pfb>
-Output written on prez.pdf (28 pages, 249304 bytes).
+Output written on prez.pdf (31 pages, 342818 bytes).
 PDF statistics:
- 857 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 131072)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 968 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 131072)
+ 80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
