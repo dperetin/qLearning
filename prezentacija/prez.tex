@@ -20,27 +20,728 @@
 
 \section{Uvod}
 \frame{
-$$
-\left[
-\begin{array}{cccccc}
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-\end{array}
-\right]\qquad
-\left[
-\begin{array}{cccccc}
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 \\
-\end{array}
-\right]
-$$
+\includegraphics{slike/R.pdf}
+}
+\frame{
+	
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & 100 \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				\end{array}
+				\right]
+				$
+			}
+		}
+	\end{picture}
+
+}
+\frame{
+	
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & 100 \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				\end{array}
+				\right]
+				$
+			}
+		}
+	\put(10, 23){\vector(1,0){20}}
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}0} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				\end{array}
+				\right]
+				$
+			}
+		}
+	\put(10, 23){\vector(1,0){20}}
+	\end{picture}
+
+}
+
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}0} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				\end{array}
+				\right]
+				$
+			}
+		}
+	\put(10, 23){\vector(1,0){20}}
+	\put(10, -31){\vector(1,0){20}}
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & {\color{red}0} & - & - & {\color{red}0} & {\color{red}100} \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}0} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				\end{array}
+				\right]
+				$
+			}
+		}
+	\put(10, 23){\vector(1,0){20}}
+	\put(10, -31){\vector(1,0){20}}
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & {\color{red}0} & - & - & {\color{red}0} & {\color{red}100} \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}0} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & {\color{red}0} & 0 & 0 & {\color{red}0} & {\color{red}0} \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+	\put(10, 23){\vector(1,0){20}}
+	\put(10, -31){\vector(1,0){20}}
+	\put(0,-60){
+			\mbox{$
+			Q_{2,6} = R_{2,6}+0.8 \cdot \max\{Q_{6,2},Q_{6,5},Q_{6,6}\}
+			        = 100+0.8 \cdot 0
+			        = 100
+			$
+			}}
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & {\color{red}0} & - & - & {\color{red}0} & {\color{red}100} \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}100} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & {\color{red}0} & 0 & 0 & {\color{red}0} & {\color{red}0} \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+	\put(10, 23){\vector(1,0){20}}
+	\put(10, -31){\vector(1,0){20}}
+	\put(0,-60){
+			\mbox{$
+			Q_{2,6} = R_{2,6}+0.8 \cdot \max\{Q_{6,2},Q_{6,5},Q_{6,6}\}
+			        = 100+0.8 \cdot 0
+			        = 100
+			$
+			}}
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & 100 \\
+				- & - & - & 0 & - & - \\
+				- & 0 & 0 & - & 0 & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 100 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & 100 \\
+				- & - & - & 0 & - & - \\
+				- & {\color{red}0}  & {\color{red}0}  & - & {\color{red}0}  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 100 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & 100 \\
+				- & - & - & 0 & - & - \\
+				- & {\color{red}0}  & 0  & - & 0  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 100 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & {\color{red}0} & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & {\color{red}0} & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & {\color{red}0}  & 0  & - & 0  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & {\color{red}0} & 0 & {\color{red}100} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & {\color{red}0} & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+		
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & {\color{red}0} & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & {\color{red}0}  & 0  & - & 0  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & {\color{red}0} & 0 & {\color{red}100} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & {\color{red}80} & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+		\put(0,-60){
+			\mbox{$
+			Q_{4,2} = R_{4,2}+0.8 \cdot \max\{Q_{2,4},Q_{2,6}\}
+			        = 0+0.8 \cdot 100
+			        = 80
+			$
+			}}
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & {\color{red}0} & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0  & 0  & - & 0  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 100 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 80 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+		
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0  & 0  & - & 0  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & 0 & - & - & 0 & 100 \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}100} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 80 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+		
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0  & 0  & - & 0  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & {\color{red}0}  & - & - & {\color{red}0}  & {\color{red}100}  \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}100} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 80 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & {\color{red}0} & 0 & 0 & {\color{red}0} & {\color{red}0} \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+		
+	
+	\end{picture}
+
+}
+\frame{
+
+	\begin{picture}(400,0)
+		\put(0,0){
+			\mbox{
+				$ R=
+				\left[
+				\begin{array}{cccccc}
+				- & - & - & - & 0 & - \\
+				- & - & - & 0 & - & {\color{red}100} \\
+				- & - & - & 0 & - & - \\
+				- & 0  & 0  & - & 0  & - \\
+				0 & - & - & 0 & - & 100 \\
+				- & {\color{red}0}  & - & - & {\color{red}0}  & {\color{red}100}  \\
+				\end{array}
+				\right]\quad Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & {\color{red}100} \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & 80 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 & 0 \\
+				0 & {\color{red}0} & 0 & 0 & {\color{red}0} & {\color{red}0} \\
+				
+				\end{array}
+				\right]
+				$
+			}
+		}
+		\put(0,-60){
+			\mbox{$
+			Q_{2,6} = R_{2,6}+0.8 \cdot \max\{Q_{6,2},Q_{6,5},Q_{6,6}\}
+			        = 100+0.8 \cdot 0
+			        = 100
+			$
+			}}
+	
+	\end{picture}
+
+}
+\frame{$$
+Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 400 & 0 \\
+				0 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 0 & 0 & 320 & 0 & 0 \\
+				0 & 400 & 256 & 0 & 400 & 0 \\
+				320 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 400 & 0 & 0 & 400 & 500 \\
+				
+				\end{array}
+				\right]
+				$$
+				$$
+				\begin{array}{cccccccc}
+				\phantom{\mathrm{PUT:}}&\phantom{3} & \phantom{\rightarrow} &\phantom{4}&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
+				\end{array}$$
+}
+\frame{$$
+Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 400 & 0 \\
+				0 & 0 & 0 & 320 & 0 & 500 \\
+				{\color{red}0} & {\color{red}0} & {\color{red}0} & {\color{red}320} & {\color{red}0} & {\color{red}0} \\
+				0 & 400 & 256 & 0 & 400 & 0 \\
+				320 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 400 & 0 & 0 & 400 & 500 \\
+				
+				\end{array}
+				\right]
+				$$
+				%$$\mathrm{PUT: }3$$
+				$$
+				\begin{array}{cccccccc}
+				\mathrm{PUT:}&3 & \phantom{\rightarrow} &\phantom{4}&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
+				\end{array}$$
+}
+\frame{$$
+Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 400 & 0 \\
+				0 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 0 & 0 & {\color{red}320} & 0 & 0 \\
+				0 & 400 & 256 & 0 & 400 & 0 \\
+				320 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 400 & 0 & 0 & 400 & 500 \\
+				
+				\end{array}
+				\right]$$
+				%$$\mathrm{PUT: }3 \rightarrow 4$$
+				$$
+				\begin{array}{cccccccc}
+				\mathrm{PUT:}&3 & \rightarrow &4&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
+				\end{array}$$
+}
+\frame{$$
+Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 400 & 0 \\
+				0 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 0 & 0 & 320 & 0 & 0 \\
+				{\color{red}0} & {\color{red}400} & {\color{red}256} & {\color{red}0} & {\color{red}400} & {\color{red}0} \\
+				320 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 400 & 0 & 0 & 400 & 500 \\
+				
+				\end{array}
+				\right]$$
+				%$$\mathrm{PUT: }3 \rightarrow 4$$
+				$$
+				\begin{array}{cccccccc}
+				\mathrm{PUT:}&3 & \rightarrow &4&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
+				\end{array}$$
+}
+\frame{$$
+Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 400 & 0 \\
+				0 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 0 & 0 & 320 & 0 & 0 \\
+				0 & {\color{red}400} & 256 & 0 & 400 & 0 \\
+				320 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 400 & 0 & 0 & 400 & 500 \\
+				
+				\end{array}
+				\right]$$
+				%$$\mathrm{PUT: }3 \rightarrow 4\rightarrow 2$$
+				$$
+				\begin{array}{cccccccc}
+				\mathrm{PUT:}&3 & \rightarrow &4&\rightarrow &2&\phantom{\rightarrow} &\phantom{6}
+				\end{array}$$
+}
+\frame{$$
+Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 400 & 0 \\
+				{\color{red}0} & {\color{red}0} & {\color{red}0} & {\color{red}320} & {\color{red}0} & {\color{red}500} \\
+				0 & 0 & 0 & 320 & 0 & 0 \\
+				0 & 400 & 256 & 0 & 400 & 0 \\
+				320 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 400 & 0 & 0 & 400 & 500 \\
+				
+				\end{array}
+				\right]$$
+				%$$\mathrm{PUT: }3 \rightarrow 4\rightarrow 2$$
+				$$
+				\begin{array}{cccccccc}
+				\mathrm{PUT:}&3 & \rightarrow &4&\rightarrow &2&\phantom{\rightarrow} &\phantom{6}
+				\end{array}$$
+}
+\frame{$$
+Q=
+				\left[
+				\begin{array}{cccccc}
+				0 & 0 & 0 & 0 & 400 & 0 \\
+				0 & 0 & 0 & 320 & 0 & {\color{red}500} \\
+				0 & 0 & 0 & 320 & 0 & 0 \\
+				0 & 400 & 256 & 0 & 400 & 0 \\
+				320 & 0 & 0 & 320 & 0 & 500 \\
+				0 & 400 & 0 & 0 & 400 & 500 \\
+				
+				\end{array}
+				\right]$$
+				%$$\mathrm{PUT: }3 \rightarrow 4\rightarrow 2\rightarrow 6$$
+				$$
+				\begin{array}{cccccccc}
+				\mathrm{PUT:}&3 & \rightarrow &4&\rightarrow &2&\rightarrow &6
+				\end{array}$$
+}
+\frame{
+\includegraphics{slike/Q.pdf}
+}
+\frame{
+\begin{center}
+\includegraphics[scale=0.6]{slike/pokraj.pdf}
+\end{center}
+}
+\frame{
+\begin{center}
+\includegraphics[scale=0.6]{slike/put.pdf}
+\end{center}
 }
 \end{document}
