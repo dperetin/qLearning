@@ -1,0 +1,3 @@
+\beamer@endinputifotherversion {3.06pt}
+\select@language {croatian}
+\beamer@sectionintoc {1}{Uvod}{2}{0}{1}

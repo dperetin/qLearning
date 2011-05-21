@@ -43,7 +43,8 @@ def main():
     # Q learning
 #for i in range(1000):
     count = 0
-    while Q[kraj][kraj] != 500:   
+    while abs(Q[kraj][kraj] - 100/(1-gamma)) > 0.00001:   
+    #for it in range(1000):
         s = random.randint(0, kraj)
         while True:
             count += 1
@@ -55,10 +56,10 @@ def main():
   
     # ispis matrice Q
     print count
-#print    
-#   print 'Matrica Q:'  
-#   for red in Q:
-#       print '\t'.join([str(n)[:7] for n in red])
+    print    
+    print 'Matrica Q:'  
+    for red in Q:
+        print '\t'.join([str(n)[:7] for n in red])
   
     # racuna najbolji put
     put = []  

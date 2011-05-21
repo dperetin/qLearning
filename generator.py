@@ -21,8 +21,9 @@ def main():
             redak.append(float('-inf'))
         matrica.append(redak)
      
-    broj_elementa = random.sample(range(1, 6), 1);
-    puni_elementi = random.sample(range(1, size), broj_elementa[0])
+    broj_elementa = random.sample(range(1, 3), 1);
+    puni_elementi = random.sample(range(1, 3), broj_elementa[0])
+    #puni_elementi = random.sample(range(size), broj_elementa[0])
     for j in puni_elementi:
             matrica[0][j] = 0
             matrica[j][0] = matrica[0][j]
@@ -30,7 +31,8 @@ def main():
     for  i in range(1, size):
         #print i
         broj_elementa = random.sample(range(1, 3), 1);
-        puni_elementi = random.sample(range(i + 1, size), min(broj_elementa[0], size - i - 1))
+        puni_elementi = random.sample(range(i + 1, min(i+3, size)), min(broj_elementa[0], size - i - 1))
+        #puni_elementi = random.sample(range(i + 1), min(broj_elementa[0], size - i - 1))
         elementi_prije = random.sample(range(max(i-2, 0), i), 1)
         for j in elementi_prije:
             matrica[i][j] = 0
@@ -44,8 +46,8 @@ def main():
   #      for j in range(i, size):
    #         matrica[i][j] = matrica[j][i]
 
-  #  for i in range(size):
-  #      matrica[i][i] = float('-inf')
+    for i in range(size):
+        matrica[i][i] = float('-inf')
 
     matrica[cilj][cilj] = 100
 
@@ -69,7 +71,7 @@ def main():
             if broj == float('-inf'):
                 dobri_redak.append(0)
             else:
-                dobri_redak.append(broj)
+                dobri_redak.append(1)
         dobra_matrica.append(dobri_redak)
 
 
