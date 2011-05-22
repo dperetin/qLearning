@@ -20,10 +20,40 @@
 
 \section{Uvod}
 \frame{
-\includegraphics{slike/R.pdf}
+\frametitle{Q Learning}
+\begin{itemize}
+\item
+Tehnika učenja s podrškom.
+\item
+Agent uči evaluacijsku funkciju
+$$Q:S\times A \to \mathbb{R}$$
+gdje je $S$ skup stanja, a $A$ skup akcija akcija.
+\item 
+Agentu ne mora biti poznat model okoliša.
+\end{itemize}
 }
+
+\section{Primjer problema}
 \frame{
+	\frametitle{Kretanje robota}
+\begin{figure}
+	\includegraphics[scale=0.5]{slike/soba.pdf}
+	\caption{Agent se nalazi u jednoj od soba, mora izaći van}
+\end{figure}
 	
+}
+
+\frame{
+\begin{figure}
+\includegraphics[scale=0.8]{slike/R.pdf}
+	\caption{Dijagram stanja prethodnog tlocrta}
+\end{figure}
+}
+
+\section{Opis algoritma}
+
+\frame{
+	\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -55,7 +85,7 @@
 
 }
 \frame{
-	
+	\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -88,7 +118,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -122,7 +152,7 @@
 }
 
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -156,7 +186,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -190,7 +220,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -232,7 +262,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -274,7 +304,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -308,7 +338,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -342,7 +372,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -376,7 +406,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -411,7 +441,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -452,7 +482,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -487,7 +517,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -522,7 +552,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -557,7 +587,7 @@
 
 }
 \frame{
-
+\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
 		\put(0,0){
 			\mbox{
@@ -597,7 +627,9 @@
 	\end{picture}
 
 }
-\frame{$$
+\frame{
+\frametitle{Nalaženje najkraćeg puta}
+$$
 Q=
 				\left[
 				\begin{array}{cccccc}
@@ -616,7 +648,7 @@ Q=
 				\phantom{\mathrm{PUT:}}&\phantom{3} & \phantom{\rightarrow} &\phantom{4}&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
 				\end{array}$$
 }
-\frame{$$
+\frame{\frametitle{Nalaženje najkraćeg puta}$$
 Q=
 				\left[
 				\begin{array}{cccccc}
@@ -636,7 +668,7 @@ Q=
 				\mathrm{PUT:}&3 & \phantom{\rightarrow} &\phantom{4}&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
 				\end{array}$$
 }
-\frame{$$
+\frame{\frametitle{Nalaženje najkraćeg puta}$$
 Q=
 				\left[
 				\begin{array}{cccccc}
@@ -655,7 +687,7 @@ Q=
 				\mathrm{PUT:}&3 & \rightarrow &4&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
 				\end{array}$$
 }
-\frame{$$
+\frame{\frametitle{Nalaženje najkraćeg puta}$$
 Q=
 				\left[
 				\begin{array}{cccccc}
@@ -674,7 +706,7 @@ Q=
 				\mathrm{PUT:}&3 & \rightarrow &4&\phantom{\rightarrow} &\phantom{2}&\phantom{\rightarrow} &\phantom{6}
 				\end{array}$$
 }
-\frame{$$
+\frame{\frametitle{Nalaženje najkraćeg puta}$$
 Q=
 				\left[
 				\begin{array}{cccccc}
@@ -693,7 +725,7 @@ Q=
 				\mathrm{PUT:}&3 & \rightarrow &4&\rightarrow &2&\phantom{\rightarrow} &\phantom{6}
 				\end{array}$$
 }
-\frame{$$
+\frame{\frametitle{Nalaženje najkraćeg puta}$$
 Q=
 				\left[
 				\begin{array}{cccccc}
@@ -712,7 +744,7 @@ Q=
 				\mathrm{PUT:}&3 & \rightarrow &4&\rightarrow &2&\phantom{\rightarrow} &\phantom{6}
 				\end{array}$$
 }
-\frame{$$
+\frame{\frametitle{Nalaženje najkraćeg puta}$$
 Q=
 				\left[
 				\begin{array}{cccccc}
@@ -732,31 +764,57 @@ Q=
 				\end{array}$$
 }
 \frame{
-\includegraphics{slike/Q.pdf}
+\begin{figure}
+\includegraphics[scale=0.8]{slike/Q.pdf}
+\frametitle{Nalaženje najkraćeg puta}
+\caption{Dijagram stanja iz perspektive funkcije $Q$}
+\end{figure}
 }
+
+\frame{
+\frametitle{Pseudokod}
+}
+
+\section{Implementacija i rezultati}
 \frame{
 \begin{center}
-\includegraphics[scale=0.6]{slike/pokraj.pdf}
+\begin{figure}
+\includegraphics[scale=0.5]{slike/pokraj.pdf}
+\caption{Dijagram sa 100 stanja}
+\end{figure}
 \end{center}
 }
 \frame{
 \begin{center}
-\includegraphics[scale=0.6]{slike/put.pdf}
+\begin{figure}
+\includegraphics[scale=0.5]{slike/put.pdf}
+\caption{Dijagram sa 100 stanja}
+\end{figure}
 \end{center}
 }
+
 \frame{
 \begin{center}
+\begin{figure}
 \includegraphics[scale=0.8]{slike/bench1.pdf}
+\caption{Broj koraka algoritma u odnosu na broj stanja}
+\end{figure}
 \end{center}
 }
 \frame{
 \begin{center}
+\begin{figure}
 \includegraphics[scale=0.8]{slike/bench2.pdf}
+\caption{Broj epizoda u odnosu na broj stanja}
+\end{figure}
 \end{center}
 }
 \frame{
 \begin{center}
+\begin{figure}
 \includegraphics[scale=0.8]{slike/bench3.pdf}
+\caption{Broj epizoda u odnosu na vrijednost $\gamma$}
+\end{figure}
 \end{center}
 }
 \end{document}

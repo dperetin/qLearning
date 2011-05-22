@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.4.21)  21 MAY 2011 21:55
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.4.21)  22 MAY 2011 20:21
 entering extended mode
  %&-line parsing enabled.
 **prez.tex
@@ -910,139 +910,153 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<slike/R.pdf, id=49, 311.564pt x 197.52998pt>
-File: slike/R.pdf Graphic file (type pdf)
- <use slike/R.pdf>
-Overfull \hbox (4.27335pt too wide) in paragraph at lines 24--24
-[][]  
- []
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
-[2
-
- <./slike/R.pdf>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 56.
- (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-)
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 56--56
-[][]  
+) [2
+
+]
+
+pdfTeX warning: pdflatex (file ./slike/soba.pdf): PDF inclusion: found PDF vers
+ion <1.5>, but at most version <1.4> allowed
+<slike/soba.pdf, id=102, 578.16pt x 335.2525pt>
+File: slike/soba.pdf Graphic file (type pdf)
+ <use slike/soba.pdf>
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 44.
+
+
+Overfull \vbox (3.17203pt too high) detected at line 44
  []
 
 [3
 
-]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 89--89
-[][]  
- []
+ <./slike/soba.pdf
 
-[4
+pdfTeX warning: pdflatex (file ./slike/soba.pdf): PDF inclusion: Page Group det
+ected which pdfTeX can't handle. Ignoring it.
+>] <slike/R.pdf, id=205, 311.564pt x 197.52998pt>
+File: slike/R.pdf Graphic file (type pdf)
+ <use slike/R.pdf> [4
 
-]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 122--122
+ <./slike/R.pdf>]
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 86--86
 [][]  
  []
 
 [5
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 157--157
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 119--119
 [][]  
  []
 
 [6
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 191--191
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 152--152
 [][]  
  []
 
 [7
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 233--233
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 187--187
 [][]  
  []
 
 [8
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 275--275
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 221--221
 [][]  
  []
 
 [9
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 309--309
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 263--263
 [][]  
  []
 
 [10
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 343--343
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 305--305
 [][]  
  []
 
 [11
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 377--377
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 339--339
 [][]  
  []
 
 [12
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 412--412
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 373--373
 [][]  
  []
 
 [13
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 453--453
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 407--407
 [][]  
  []
 
 [14
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 488--488
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 442--442
 [][]  
  []
 
 [15
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 523--523
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 483--483
 [][]  
  []
 
 [16
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 558--558
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 518--518
 [][]  
  []
 
 [17
 
 ]
-Overfull \hbox (92.71013pt too wide) in paragraph at lines 599--599
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 553--553
 [][]  
  []
 
 [18
 
-] [19
+]
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 588--588
+[][]  
+ []
 
-] [20
+[19
+
+]
+Overfull \hbox (92.71013pt too wide) in paragraph at lines 629--629
+[][]  
+ []
+
+[20
 
 ] [21
 
@@ -1054,36 +1068,42 @@ Overfull \hbox (92.71013pt too wide) in paragraph at lines 599--599
 
 ] [25
 
-]
-<slike/Q.pdf, id=715, 289.08pt x 183.27573pt>
-File: slike/Q.pdf Graphic file (type pdf)
- <use slike/Q.pdf> [26
+] [26
 
- <./slike/Q.pdf>] <slike/pokraj.pdf, id=748, 281.05pt x 332.43597pt>
+] [27
+
+]
+<slike/Q.pdf, id=942, 289.08pt x 183.27573pt>
+File: slike/Q.pdf Graphic file (type pdf)
+ <use slike/Q.pdf> [28
+
+ <./slike/Q.pdf>] [29
+
+] <slike/pokraj.pdf, id=1006, 281.05pt x 332.43597pt>
 File: slike/pokraj.pdf Graphic file (type pdf)
 
-<use slike/pokraj.pdf> [27
+<use slike/pokraj.pdf> [30
 
  <./slike/pokraj.pdf>]
-<slike/put.pdf, id=780, 281.05pt x 332.43597pt>
+<slike/put.pdf, id=1041, 281.05pt x 332.43597pt>
 File: slike/put.pdf Graphic file (type pdf)
- <use slike/put.pdf> [28
+ <use slike/put.pdf> [31
 
- <./slike/put.pdf>] <slike/bench1.pdf, id=812, 289.08pt x 178.56712pt>
+ <./slike/put.pdf>] <slike/bench1.pdf, id=1077, 289.08pt x 178.56712pt>
 File: slike/bench1.pdf Graphic file (type pdf)
 
-<use slike/bench1.pdf> [29
+<use slike/bench1.pdf> [32
 
  <./slike/bench1.pdf>]
-<slike/bench2.pdf, id=850, 289.08pt x 186.8079pt>
+<slike/bench2.pdf, id=1118, 289.08pt x 186.8079pt>
 File: slike/bench2.pdf Graphic file (type pdf)
  <use slike/bench2.pdf>
-[30
+[33
 
- <./slike/bench2.pdf>] <slike/bench3.pdf, id=882, 289.08pt x 186.8079pt>
+ <./slike/bench2.pdf>] <slike/bench3.pdf, id=1153, 289.08pt x 186.8079pt>
 File: slike/bench3.pdf Graphic file (type pdf)
 
-<use slike/bench3.pdf> [31
+<use slike/bench3.pdf> [34
 
  <./slike/bench3.pdf>]
 \tf@nav=\write5
@@ -1102,11 +1122,11 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 8600 strings out of 256216
- 151509 string characters out of 1917072
+ 8721 strings out of 256216
+ 153750 string characters out of 1917072
  249372 words of memory out of 1500000
- 11540 multiletter control sequences out of 10000+200000
- 11764 words of font info for 43 fonts, out of 1200000 for 2000
+ 11644 multiletter control sequences out of 10000+200000
+ 17340 words of font info for 64 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  41i,15n,51p,329b,558s stack positions out of 5000i,500n,6000p,200000b,15000s
 </usr/share/texmf/fonts/type1/bluesky/cm/cmcsc10.pfb></usr/share/texmf/fonts/
@@ -1114,11 +1134,13 @@ type1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb
 ></usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/typ
 e1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmss10.pfb></u
 sr/share/texmf/fonts/type1/bluesky/cm/cmss8.pfb></usr/share/texmf/fonts/type1/b
-luesky/cm/cmssi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr
-/share/texmf/fonts/type1/bluesky/latex-fonts/line10.pfb>
-Output written on prez.pdf (31 pages, 342818 bytes).
+luesky/cm/cmssi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmssi12.pfb></us
+r/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/b
+luesky/latex-fonts/line10.pfb></usr/share/texmf/fonts/type1/bluesky/ams/msbm10.
+pfb>
+Output written on prez.pdf (34 pages, 416325 bytes).
 PDF statistics:
- 968 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 131072)
- 80 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1250 PDF objects out of 1440 (max. 8388607)
+ 73 named destinations out of 1000 (max. 131072)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

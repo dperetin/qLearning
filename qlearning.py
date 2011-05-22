@@ -5,6 +5,55 @@ import sys
 import math
 
 
+def generiraj_int(broj_cvorova, ciljni_cvor, tip='gusta'):
+    """
+    Fukncija generira graf koji se sastoji od broj_cvorova cvorova i
+    vraca matricu koja je popunjena u skladu sa ciljnim cvorom cilj
+    """
+    size = broj_cvorova
+    cilj = ciljni_cvor
+    matrica = []
+    
+    #popunjavam matricu sa -inf
+    for i in range(size):
+        redak = []
+        for j in range(size):
+            redak.append(float('-inf'))
+        matrica.append(redak)
+     
+    broj_elementa = random.sample(range(1, 3), 1);
+    if tip == 'gusta':
+        puni_elementi = random.sample(range(size), broj_elementa[0])
+    if tip == 'duga':
+        puni_elementi = random.sample(range(1, 3), broj_elementa[0])
+    for j in puni_elementi:
+            matrica[0][j] = random.random() * 100;
+            matrica[j][0] = matrica[0][j]
+    
+    for  i in range(1, size):
+        broj_elementa = random.sample(range(1, 3), 1);
+        if tip == 'gusta':
+            puni_elementi = random.sample(range(i + 1), min(broj_elementa[0], size - i - 1))
+        if tip == 'duga':
+            puni_elementi = random.sample(range(i + 1, min(i+3, size)), min(broj_elementa[0], size - i - 1))
+        elementi_prije = random.sample(range(max(i-2, 0), i), 1)
+        for j in elementi_prije:
+            matrica[i][j] = random.random() * 100;
+            matrica[j][i] = matrica[i][j]
+        for j in puni_elementi:
+            matrica[i][j] = 0
+            matrica[j][i] = matrica[i][j]
+    
+    for i in range(size):
+        matrica[i][i] = float('-inf')
+
+    matrica[cilj][cilj] = 100
+
+    for i in range(size):
+        if matrica[i][cilj] != float('-inf'):
+            matrica[i][cilj] = 100
+
+    return matrica
 def generiraj(broj_cvorova, ciljni_cvor, tip='gusta'):
     """
     Fukncija generira graf koji se sastoji od broj_cvorova cvorova i
