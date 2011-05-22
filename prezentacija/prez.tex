@@ -789,7 +789,20 @@ Q=
 	\end{itemize}
 \end{enumerate}
 }
-
+\frame{
+\begin{algorithmic}
+\STATE učitaj parametar $\gamma$ i matricu $R$
+\STATE inicijaliziraj vrijednosti matrice $Q$ na 0
+\WHILE{nema konvergencije}
+\STATE na slučajan način izaberi inicijalno stanje
+\WHILE{nismo u završnom stanju}
+\STATE izaberi jedno od mogućih akcija za trenutno stanje
+\STATE $Q_{s, a} = R_{s, a}+\gamma \cdot \max_i\{Q_{a, a_i}\}$
+\STATE postavi sljedeće stanje za trenutno stanje
+\ENDWHILE
+\ENDWHILE
+\end{algorithmic}
+}
 
 \section{Implementacija i rezultati}
 \frame{

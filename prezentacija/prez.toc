@@ -3,4 +3,4 @@
 \beamer@sectionintoc {1}{Uvod}{2}{0}{1}
 \beamer@sectionintoc {2}{Primjer problema}{3}{0}{2}
 \beamer@sectionintoc {3}{Opis algoritma}{5}{0}{3}
-\beamer@sectionintoc {4}{Implementacija i rezultati}{30}{0}{4}
+\beamer@sectionintoc {4}{Implementacija i rezultati}{31}{0}{4}
