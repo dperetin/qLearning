@@ -3,7 +3,8 @@
 \usecolortheme{dolphin}
 \usefonttheme{structuresmallcapsserif}
 %\usecolortheme[named=Brown]{structure}
-
+\usepackage{algorithmic}
+\usepackage{listings}
 %\usepackage{beamerthemesplit}
 \usepackage{amsfonts,amssymb}
 \usepackage[croatian]{babel}
@@ -773,7 +774,22 @@ Q=
 
 \frame{
 \frametitle{Pseudokod}
+\begin{enumerate}
+\item učitaj parametra $\gamma$ i matricu $R$
+\item inicijaliziraj vrijednosti matrice $Q$ na 0
+\item ponavljaj za svaku epizodu
+	\begin{itemize}
+	\item na slučajan način izaberi inicijalno stanje
+	\item ponavljaj dok ne dođeš u ciljno stanje
+		\begin{itemize}
+		\item izaberi jedno od mogućih akcija za trenutno stanje
+		\item $Q_{s, a} = R_{s, a}+\gamma \cdot \max_i\{Q_{a, a_i}\}$
+		\item postavi sljedeće stanje za trenutno stanje
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
 }
+
 
 \section{Implementacija i rezultati}
 \frame{
