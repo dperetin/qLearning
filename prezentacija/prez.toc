@@ -1,6 +1,12 @@
-\beamer@endinputifotherversion {3.06pt}
+\beamer@endinputifotherversion {3.07pt}
 \select@language {croatian}
 \beamer@sectionintoc {1}{Uvod}{2}{0}{1}
-\beamer@sectionintoc {2}{Primjer problema}{3}{0}{2}
+\beamer@subsectionintoc {1}{1}{Definicija}{2}{0}{1}
+\beamer@sectionintoc {2}{Primjena algoritma}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{Motivacija}{3}{0}{2}
 \beamer@sectionintoc {3}{Opis algoritma}{5}{0}{3}
+\beamer@subsectionintoc {3}{1}{U\IeC {\v c}enje funkcije $Q$}{5}{0}{3}
+\beamer@subsectionintoc {3}{2}{Nala\IeC {\v z}enje najkra\IeC {\'c}eg puta}{21}{0}{3}
 \beamer@sectionintoc {4}{Implementacija i rezultati}{31}{0}{4}
+\beamer@subsectionintoc {4}{1}{Generiranje problema}{31}{0}{4}
+\beamer@subsectionintoc {4}{2}{Testiranja}{35}{0}{4}

@@ -13,13 +13,21 @@
 
 \title{Q Learning}
 \author{Ivan Androš \\ Dejan Peretin \\ Petra Podolski}
-\date{25. svibnja 2011.}
-
+\date{}
 \begin{document}
 
-\frame{\titlepage} 
+\frame{
+\titlepage
+\begin{flushright}
+Mentor: Dr. sc.Tomislav Šmuc
+\end{flushright}
+\begin{center}
+25. svibnja 2011.
+\end{center}
+} 
 
 \section{Uvod}
+\subsection{Definicija}
 \frame{
 \frametitle{Q Learning}
 \begin{itemize}
@@ -34,7 +42,8 @@ Agentu ne mora biti poznat model okoliša.
 \end{itemize}
 }
 
-\section{Primjer problema}
+\section{Primjena algoritma}
+\subsection{Motivacija}
 \frame{
 	\frametitle{Kretanje robota}
 \begin{figure}
@@ -52,7 +61,7 @@ Agentu ne mora biti poznat model okoliša.
 }
 
 \section{Opis algoritma}
-
+\subsection{Učenje funkcije $Q$}
 \frame{
 	\frametitle{Učenje funkcije $Q$}
 	\begin{picture}(400,0)
@@ -628,7 +637,9 @@ Agentu ne mora biti poznat model okoliša.
 	\end{picture}
 
 }
+\subsection{Nalaženje najkraćeg puta}
 \frame{
+
 \frametitle{Nalaženje najkraćeg puta}
 $$
 Q=
@@ -773,23 +784,7 @@ Q=
 }
 
 \frame{
-\frametitle{Pseudokod}
-\begin{enumerate}
-\item učitaj parametra $\gamma$ i matricu $R$
-\item inicijaliziraj vrijednosti matrice $Q$ na 0
-\item ponavljaj za svaku epizodu
-	\begin{itemize}
-	\item na slučajan način izaberi inicijalno stanje
-	\item ponavljaj dok ne dođeš u ciljno stanje
-		\begin{itemize}
-		\item izaberi jedno od mogućih akcija za trenutno stanje
-		\item $Q_{s, a} = R_{s, a}+\gamma \cdot \max_i\{Q_{a, a_i}\}$
-		\item postavi sljedeće stanje za trenutno stanje
-		\end{itemize}
-	\end{itemize}
-\end{enumerate}
-}
-\frame{
+\frametitle{Pseudokod učenja funkcije Q}
 \begin{algorithmic}
 \STATE učitaj parametar $\gamma$ i matricu $R$
 \STATE inicijaliziraj vrijednosti matrice $Q$ na 0
@@ -803,8 +798,40 @@ Q=
 \ENDWHILE
 \end{algorithmic}
 }
-
+\frame{
+\frametitle{Pseudokod nalaženja najkraćeg puta}
+\begin{algorithmic}
+\STATE učitaj matricu $Q$ i početno stanje
+\WHILE{trenutno stanje != finalno stanje}
+\STATE za trenutno stanje nađi akciju koja ima najveću vrijednost u matrici $Q$
+\STATE za trenutno stanje odaberi ono stanje u koje vodi prethodno odabrana akcija
+\ENDWHILE
+\end{algorithmic}
+}
 \section{Implementacija i rezultati}
+\subsection{Generiranje problema}
+\frame{
+\frametitle{Cilj rada}
+Generirati velike probleme i ispitati kako algoritam skalira sa
+brojem stanja.
+}
+\frame{
+\frametitle{Kako na slučajan način generirati tlocrt?}
+\begin{itemize}
+\item
+graf mora biti povezan
+\item
+ne smije biti \emph{pregust}
+\item
+na slučajan način generiramo nagrade
+\end{itemize}
+}
+\frame{
+\frametitle{Dvije vrste matrica}
+}
+\frame{
+\frametitle{Implementacija u pythonu}
+}
 \frame{
 \begin{center}
 \begin{figure}
@@ -821,7 +848,7 @@ Q=
 \end{figure}
 \end{center}
 }
-
+\subsection{Testiranja}
 \frame{
 \begin{center}
 \begin{figure}
