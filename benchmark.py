@@ -4,15 +4,18 @@ import qlearning as QL
 
 
 graf = []
-for i in range(10, 100, 10):
-	se = 0
-	sk = 0
-	for j in range(10):
-		print i, j
-		x = QL.generiraj(i, i-1)
-		a = QL.qLearning(x, 0.8, 0, i-1, bench=True)
-		se += a[2]
-		sk += a[3]
-	graf.append((se/10, sk/10))
+k=0.1
+for i in range(20):
+    print i
+    se = 0
+    sk = 0
+    x = QL.generiraj(100, 99)
+    a = QL.qLearning(x, k, 0, 99, bench=True)
+    se += a[2]
+    sk += a[3]
+    graf.append((k, se, sk))
+    QL.imp(graf)
+    k+=0.05
+ 
 
 QL.imp(graf)

@@ -5,13 +5,22 @@ import sys
 import math
 
 
-def generiraj(broj_cvorova, ciljni_cvor, tip='gusta'):
+def generiraj(size, cilj, tip='gusta', raspon=(0, 0)):
     """
-    Fukncija generira graf koji se sastoji od broj_cvorova cvorova i
-    vraca matricu koja je popunjena u skladu sa ciljnim cvorom cilj
+    size  - broj stanja u dijagramu
+    cilj  - index ciljnog cvora, brojeci od nule. Nagrada je automatski postavljena na 100
+    tip   - tip matrice koja se generira.     
+            'gusta' - <default>
+                      stanja mogu biti povezana sa svim stanjima, ali je mala vjerovatnost
+                      da bude povezana sa stanjima koja su daleko
+            'duga'  - stanja mogu biti povezana samo sa nekoliko najblizih stanja
+    range - ureden par cijelih brojeva (a, b) 
+            vrijedonsti matrice a su iz segmenta [a, b] 
+
+    Funkcija vraca matricu nagrada sljedeceg formata:
+         - ako stanja x i y nisu spojena, m(x, y) = -inf
+         - ako jesu spojena, m(x, y) = z iz [a, b]
     """
-    size = broj_cvorova
-    cilj = ciljni_cvor
     matrica = []
     
     #popunjavam matricu sa -inf
@@ -27,7 +36,7 @@ def generiraj(broj_cvorova, ciljni_cvor, tip='gusta'):
     if tip == 'duga':
         puni_elementi = random.sample(range(1, 3), broj_elementa[0])
     for j in puni_elementi:
-            matrica[0][j] = 0
+            matrica[0][j] = random.randint(raspon[0], raspon[1]) 
             matrica[j][0] = matrica[0][j]
     
     for  i in range(1, size):
@@ -38,7 +47,7 @@ def generiraj(broj_cvorova, ciljni_cvor, tip='gusta'):
             puni_elementi = random.sample(range(i + 1, min(i+3, size)), min(broj_elementa[0], size - i - 1))
         elementi_prije = random.sample(range(max(i-2, 0), i), 1)
         for j in elementi_prije:
-            matrica[i][j] = 0
+            matrica[i][j] = random.randint(raspon[0], raspon[1]) 
             matrica[j][i] = matrica[i][j]
         for j in puni_elementi:
             matrica[i][j] = 0
@@ -119,7 +128,7 @@ def imp(x, n=7):
     for red in x:
         print '\t'.join(map(lambda s: str(s)[:n], red))
 
-def qLearning(R, gamma, pocetak, cilj, bench=False):
+def qLearning(R, gamma, size, pocetak, cilj, bench=False):
     """
     QLearning  
     """
@@ -140,7 +149,7 @@ def qLearning(R, gamma, pocetak, cilj, bench=False):
     
     while abs(Q[kraj][kraj] - 100/(1-gamma)) > 0.00001:  
         broj_epizoda += 1
-        s = random.randint(0, kraj)
+        s = random.randint(0, size - 1)
         while True:
             broj_koraka += 1
             r = random.choice(dobri(R[s]))
