@@ -5,58 +5,7 @@ import sys
 import math
 
 
-def generiraj_int(broj_cvorova, ciljni_cvor, tip='gusta'):
-    """
-    Fukncija generira graf koji se sastoji od broj_cvorova cvorova i
-    vraca matricu koja je popunjena u skladu sa ciljnim cvorom cilj
-    """
-    size = broj_cvorova
-    cilj = ciljni_cvor
-    matrica = []
-    
-    #popunjavam matricu sa -inf
-    for i in range(size):
-        redak = []
-        for j in range(size):
-            redak.append(float('-inf'))
-        matrica.append(redak)
-     
-    broj_elementa = random.sample(range(1, 3), 1);
-    if tip == 'gusta':
-        puni_elementi = random.sample(range(size), broj_elementa[0])
-    if tip == 'duga':
-        puni_elementi = random.sample(range(1, 3), broj_elementa[0])
-    for j in puni_elementi:
-            matrica[0][j] = random.random() * 100;
-            matrica[j][0] = matrica[0][j]
-    
-    for  i in range(1, size):
-        broj_elementa = random.sample(range(1, 3), 1);
-        if tip == 'gusta':
-            puni_elementi = random.sample(range(i + 1), min(broj_elementa[0], size - i - 1))
-        if tip == 'duga':
-            puni_elementi = random.sample(range(i + 1, min(i+3, size)), min(broj_elementa[0], size - i - 1))
-        elementi_prije = random.sample(range(max(i-2, 0), i), 1)
-        for j in elementi_prije:
-            matrica[i][j] = random.random() * 100;
-            matrica[j][i] = matrica[i][j]
-        for j in puni_elementi:
-            matrica[i][j] = 0
-            matrica[j][i] = matrica[i][j]
-    
-    for i in range(size):
-        matrica[i][i] = float('-inf')
-
-    matrica[cilj][cilj] = 100
-
-    for i in range(size):
-        if matrica[i][cilj] != float('-inf'):
-            matrica[i][cilj] = 100
-
-    return matrica
-    
-    
-def generiraj(broj_cvorova, ciljni_cvor, tip='gusta', raspon=(0, 0)):
+def generiraj(size, cilj, tip='gusta', raspon=(0, 0)):
     """
     size  - broj stanja u dijagramu
     cilj  - index ciljnog cvora, brojeci od nule. Nagrada je automatski postavljena na 100
@@ -85,7 +34,7 @@ def generiraj(broj_cvorova, ciljni_cvor, tip='gusta', raspon=(0, 0)):
     if tip == 'gusta':
         puni_elementi = random.sample(range(size), broj_elementa[0])
     if tip == 'duga':
-        puni_elementi = random.sample(range(1, 3), broj_elementa[0])
+        puni_elementi = random.sample(range(1, 8), broj_elementa[0])
     for j in puni_elementi:
             matrica[0][j] = random.randint(raspon[0], raspon[1]) 
             matrica[j][0] = matrica[0][j]
@@ -95,7 +44,7 @@ def generiraj(broj_cvorova, ciljni_cvor, tip='gusta', raspon=(0, 0)):
         if tip == 'gusta':
             puni_elementi = random.sample(range(i + 1), min(broj_elementa[0], size - i - 1))
         if tip == 'duga':
-            puni_elementi = random.sample(range(i + 1, min(i+3, size)), min(broj_elementa[0], size - i - 1))
+            puni_elementi = random.sample(range(i + 1, min(i+8, size)), min(broj_elementa[0], size - i - 1))
         elementi_prije = random.sample(range(max(i-2, 0), i), 1)
         for j in elementi_prije:
             matrica[i][j] = random.randint(raspon[0], raspon[1]) 
@@ -116,19 +65,15 @@ def generiraj(broj_cvorova, ciljni_cvor, tip='gusta', raspon=(0, 0)):
     return matrica
    
    
-def spremi(matrica, filename):
+def ToString(matrica):
     """
     Sprema matricu u datoteku filename, svaki redak matrice se sprema
     u novi red datoteke i elementi retka u odvojeni zarezom.
     """
-    f = open(filename, 'w')
-
-    for redak in matrica:
-        f.write(','.join(map(lambda s: str(s), redak)))
-        f.write('\n')
+    f = ','.join(map(lambda s: str(s), redak)) + '\n'
 
 
-def spremiMatricuSusjeda(matrica, filename):
+def AdjMat(matrica):
     """
     Iz matrice generira matricu susjeda i zapisuje u wolfram formatu
     """
@@ -143,14 +88,7 @@ def spremiMatricuSusjeda(matrica, filename):
                 dobri_redak.append(1)
         dobra_matrica.append(dobri_redak)
 
-    g = open(filename, 'w')
-    wolfram = ""
-    wolfram += '{'
-    for redak in dobra_matrica:
-        wolfram += '{'
-        wolfram += ','.join(map(lambda s: str(s), redak))
-        wolfram += '},'
-    g.write(wolfram[:-1]+'}')
+    return dobra_matrica
 
     
 def dobri(red):
@@ -161,15 +99,12 @@ def dobri(red):
     return ret
 
 
-def ucitaj(filename):
+def parsiraj(cijeliFajl):
     """
     Ucitava matricu iz datoteke
     """
-    f = open(filename, 'rU')
-    cijeliFajl = f.read()
     R = [map(lambda x: float(x), s.split(',')) for s in cijeliFajl.split()]
     return R
-
 
 
 def imp(x, n=7):
@@ -179,13 +114,18 @@ def imp(x, n=7):
     for red in x:
         print '\t'.join(map(lambda s: str(s)[:n], red))
 
-def qLearning(R, gamma, size, pocetak, cilj, bench=False):
+
+def qLearning(R, gamma, pocetak, bench=False):
     """
     QLearning  
     """
     poc = pocetak
-    kraj = cilj
-
+    size = len(R)
+    
+    for i in range(size):
+        if R[i][i] == 100:
+            kraj = i;
+    
     # inicijaliziram Q na 0
     Q = []
     for red in R:
