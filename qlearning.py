@@ -5,9 +5,6 @@ import sys
 import math
 
 
-<<<<<<< HEAD
-def generiraj(size, cilj, tip='gusta', raspon=(0, 0)):
-=======
 def generiraj_int(broj_cvorova, ciljni_cvor, tip='gusta'):
     """
     Fukncija generira graf koji se sastoji od broj_cvorova cvorova i
@@ -57,8 +54,9 @@ def generiraj_int(broj_cvorova, ciljni_cvor, tip='gusta'):
             matrica[i][cilj] = 100
 
     return matrica
-def generiraj(broj_cvorova, ciljni_cvor, tip='gusta'):
->>>>>>> 3594fc8644cf6465921eda40b8347eeb82bc687d
+    
+    
+def generiraj(broj_cvorova, ciljni_cvor, tip='gusta', raspon=(0, 0)):
     """
     size  - broj stanja u dijagramu
     cilj  - index ciljnog cvora, brojeci od nule. Nagrada je automatski postavljena na 100
@@ -67,7 +65,7 @@ def generiraj(broj_cvorova, ciljni_cvor, tip='gusta'):
                       stanja mogu biti povezana sa svim stanjima, ali je mala vjerovatnost
                       da bude povezana sa stanjima koja su daleko
             'duga'  - stanja mogu biti povezana samo sa nekoliko najblizih stanja
-    range - ureden par cijelih brojeva (a, b) 
+    raspon - ureden par cijelih brojeva (a, b) 
             vrijedonsti matrice a su iz segmenta [a, b] 
 
     Funkcija vraca matricu nagrada sljedeceg formata:
