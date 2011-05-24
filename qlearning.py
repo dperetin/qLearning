@@ -67,15 +67,16 @@ def generiraj(size, cilj, tip='gusta', raspon=(0, 0)):
    
 def ToString(matrica):
     """
-    Sprema matricu u datoteku filename, svaki redak matrice se sprema
-    u novi red datoteke i elementi retka u odvojeni zarezom.
+    Sprema matricu u jedan string, redovi su odvojeni znakom '\n', a 
+    elementi reda zarezom
     """
     f = ','.join(map(lambda s: str(s), redak)) + '\n'
 
 
 def AdjMat(matrica):
     """
-    Iz matrice generira matricu susjeda i zapisuje u wolfram formatu
+    Iz matrice generira matricu susjeda koja se moze koristit za crtanje 
+    grafova softverima kao sto su SAGE ili Mathematica.
     """
     dobra_matrica = []
 
@@ -101,7 +102,9 @@ def dobri(red):
 
 def parsiraj(cijeliFajl):
     """
-    Ucitava matricu iz datoteke
+    Iz stringa koji sadrzi informacije o dijagramu stanja, koji je spremljen 
+    kao niz vrijednosti odvojenih zarezom, a redovi su odvojeni znakom '\n', 
+    generira se matrica koja se moze korisiti za ucenje.
     """
     R = [map(lambda x: float(x), s.split(',')) for s in cijeliFajl.split()]
     return R
@@ -109,23 +112,27 @@ def parsiraj(cijeliFajl):
 
 def imp(x, n=7):
     """
-    ispisuje matricu
+    Improved Matrix Print (tm)
+    Ispisuje matricu u oku ugodnom formatu.
     """
     for red in x:
         print '\t'.join(map(lambda s: str(s)[:n], red))
 
 
-def qLearning(R, gamma, pocetak, bench=False):
+def LearnQ(R, gamma, kraj, bench=False):
     """
-    QLearning  
-    """
-    poc = pocetak
+    Vraca matricu Q
+    
+    R     - matrica nagrada
+    gamma - koeficient
+    kraj  - ciljni cvor, brojeci od 0
+    bench - False <default>  
+            True  - uz matricu Q vraca i broj izvrsenih epizoda i broj koraka algoritma
+                    kao uredjenu trojku
+    """   
     size = len(R)
     
-    for i in range(size):
-        if R[i][i] == 100:
-            kraj = i;
-    
+        
     # inicijaliziram Q na 0
     Q = []
     for red in R:
@@ -143,12 +150,29 @@ def qLearning(R, gamma, pocetak, bench=False):
         s = random.randint(0, size - 1)
         while True:
             broj_koraka += 1
-            r = random.choice(dobri(R[s]))
+            indeks = dobri(R[s])
+            if len(indeks) == 0:
+                break
+            r = random.choice(indeks)
             Q[s][r] = R[s][r] + gamma * max(Q[r])
             if s == kraj: 
                 break
             s = r
+    if bench:
+        return (Q, broj_epizoda, broj_koraka)
+    return Q
 
+
+def FindPath(Q, poc, kraj):
+    """
+    Vraca listu cvorova koji tvore najkraci put od cvora poc do cvora kraj, prema
+    matrici Q.
+    
+    Q    - matrica Q
+    poc  - pocetni cvor, brojeci od 0
+    kraj - ciljni cvor, brojeci od 0
+    """
+    size = len(Q)
     # racuna najbolji put
     put = []
     put.append(poc)  
@@ -156,7 +180,6 @@ def qLearning(R, gamma, pocetak, bench=False):
     while s != kraj:
         s = Q[s].index(max(Q[s]))
         put.append(s)
+    return put
     
-    if bench:
-        return(put, Q, broj_epizoda, broj_koraka)
-    return (put, Q)
+    

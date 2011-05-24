@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/openSUSE) (format=pdflatex 2011.5.19)  23 MAY 2011 21:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/openSUSE) (format=pdflatex 2011.5.19)  24 MAY 2011 21:34
 entering extended mode
  %&-line parsing enabled.
 **prez.tex
@@ -1070,20 +1070,16 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 pdfTeX warning: pdflatex (file ./slike/soba.pdf): PDF inclusion: found PDF vers
 ion <1.5>, but at most version <1.4> allowed
-<slike/soba.pdf, id=264, 578.16pt x 335.2525pt>
+<slike/soba.pdf, id=289, 578.16pt x 335.2525pt>
 File: slike/soba.pdf Graphic file (type pdf)
  <use slike/soba.pdf>
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 54.
 
-
-Overfull \vbox (12.33109pt too high) detected at line 54
- []
-
 [3
 
- <./slike/soba.pdf>] <slike/R.pdf, id=402, 311.564pt x 197.52998pt>
+ <./slike/soba.pdf>] <slike/R.pdf, id=432, 311.564pt x 197.52998pt>
 File: slike/R.pdf Graphic file (type pdf)
 
 <use slike/R.pdf> [4
@@ -1229,7 +1225,7 @@ Overfull \hbox (92.71013pt too wide) in paragraph at lines 639--639
 ] [27
 
 ]
-<slike/Q.pdf, id=1979, 289.08pt x 183.27573pt>
+<slike/Q.pdf, id=2129, 289.08pt x 183.27573pt>
 File: slike/Q.pdf Graphic file (type pdf)
  <use slike/Q.pdf> [28
 
@@ -1241,33 +1237,65 @@ File: slike/Q.pdf Graphic file (type pdf)
 
 ] [32
 
-] <slike/pokraj.pdf, id=2311, 281.05pt x 332.43597pt>
+] [33
+
+] [34
+
+] [35
+
+]
+<slike/pokraj.pdf, id=2698, 281.05pt x 332.43597pt>
 File: slike/pokraj.pdf Graphic file (type pdf)
-
-<use slike/pokraj.pdf> [33
-
- <./slike/pokraj.pdf>]
-<slike/put.pdf, id=2380, 281.05pt x 332.43597pt>
-File: slike/put.pdf Graphic file (type pdf)
- <use slike/put.pdf> [34
-
- <./slike/put.pdf>] <slike/bench1.pdf, id=2449, 289.08pt x 178.56712pt>
-File: slike/bench1.pdf Graphic file (type pdf)
-
-<use slike/bench1.pdf> [35
-
- <./slike/bench1.pdf>]
-<slike/bench2.pdf, id=2524, 289.08pt x 186.8079pt>
-File: slike/bench2.pdf Graphic file (type pdf)
- <use slike/bench2.pdf>
+ <use slike/pokraj.pdf>
 [36
 
- <./slike/bench2.pdf>] <slike/bench3.pdf, id=2594, 289.08pt x 186.8079pt>
+ <./slike/pokraj.pdf>] <slike/put.pdf, id=2772, 281.05pt x 332.43597pt>
+File: slike/put.pdf Graphic file (type pdf)
+
+<use slike/put.pdf> [37
+
+ <./slike/put.pdf>]
+<slike/benchDugi1.pdf, id=2847, 289.08pt x 74.0366pt>
+File: slike/benchDugi1.pdf Graphic file (type pdf)
+
+<use slike/benchDugi1.pdf> [38
+
+ <./slike/benchDugi1.pdf>]
+<slike/benchDugi2.pdf, id=2921, 289.08pt x 74.0366pt>
+File: slike/benchDugi2.pdf Graphic file (type pdf)
+
+<use slike/benchDugi2.pdf> [39
+
+ <./slike/benchDugi2.pdf>] [40
+
+]
+<slike/dg.pdf, id=3065, 289.08pt x 179.47853pt>
+File: slike/dg.pdf Graphic file (type pdf)
+ <use slike/dg.pdf> [41
+
+ <./slike/dg.pdf>] <slike/bench1.pdf, id=3140, 289.08pt x 178.56712pt>
+File: slike/bench1.pdf Graphic file (type pdf)
+
+<use slike/bench1.pdf> [42
+
+ <./slike/bench1.pdf>]
+<slike/bench2.pdf, id=3220, 289.08pt x 186.8079pt>
+File: slike/bench2.pdf Graphic file (type pdf)
+ <use slike/bench2.pdf>
+[43
+
+ <./slike/bench2.pdf>] <slike/bench3.pdf, id=3296, 289.08pt x 186.8079pt>
 File: slike/bench3.pdf Graphic file (type pdf)
 
-<use slike/bench3.pdf> [37
+<use slike/bench3.pdf> [44
 
- <./slike/bench3.pdf>]
+ <./slike/bench3.pdf>] [45
+
+] [46
+
+] [47
+
+]
 \tf@nav=\write5
 \openout5 = `prez.nav'.
 
@@ -1284,13 +1312,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 14690 strings out of 493848
- 251453 string characters out of 3155814
- 384095 words of memory out of 3500000
- 17486 multiletter control sequences out of 15000+200000
- 17625 words of font info for 65 fonts, out of 3000000 for 9000
+ 14769 strings out of 493848
+ 252731 string characters out of 3155814
+ 391070 words of memory out of 3500000
+ 17539 multiletter control sequences out of 15000+200000
+ 18262 words of font info for 68 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 45i,19n,56p,329b,728s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,19n,57p,329b,734s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texm
 f/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf/fonts/type1/publi
 c/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi8
@@ -1300,11 +1328,12 @@ ic/amsfonts/cm/cmss8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmssb
 x10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/shar
 e/texmf/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texmf/fonts/type
 1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-</usr/share/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prez.pdf (37 pages, 779809 bytes).
+m/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/s
+hare/texmf/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on prez.pdf (47 pages, 990616 bytes).
 PDF statistics:
- 2737 PDF objects out of 2984 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3662 PDF objects out of 4296 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

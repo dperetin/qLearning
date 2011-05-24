@@ -19,7 +19,7 @@
 \frame{
 \titlepage
 \begin{flushright}
-Mentor: Dr. sc.Tomislav Šmuc
+Mentor: Dr.\ sc.\ Tomislav Šmuc
 \end{flushright}
 \begin{center}
 25. svibnja 2011.
@@ -36,7 +36,7 @@ Tehnika učenja s podrškom.
 \item
 Agent uči evaluacijsku funkciju
 $$Q:S\times A \to \mathbb{R}$$
-gdje je $S$ skup stanja, a $A$ skup akcija akcija.
+gdje je $S$ skup stanja, a $A$ skup akcija.
 \item 
 Agentu ne mora biti poznat model okoliša.
 \end{itemize}
@@ -47,7 +47,7 @@ Agentu ne mora biti poznat model okoliša.
 \frame{
 	\frametitle{Kretanje robota}
 \begin{figure}
-	\includegraphics[scale=0.5]{slike/soba.pdf}
+	\includegraphics[scale=0.4]{slike/soba.pdf}
 	\caption{Agent se nalazi u jednoj od soba, mora izaći van}
 \end{figure}
 	
@@ -812,31 +812,50 @@ Q=
 \subsection{Generiranje problema}
 \frame{
 \frametitle{Cilj rada}
-Generirati velike probleme i ispitati kako algoritam skalira sa
-brojem stanja.
-}
-\frame{
-\frametitle{Kako na slučajan način generirati tlocrt?}
 \begin{itemize}
 \item
-graf mora biti povezan
+Implementirati Q learning algoritam i empirijski ispitati složenost algoritma.
 \item
-ne smije biti \emph{pregust}
-\item
-na slučajan način generiramo nagrade
+Generirati velike probleme i ispitati kako algoritam skalira s
+brojem stanja.
 \end{itemize}
 }
 \frame{
-\frametitle{Dvije vrste matrica}
+\frametitle{Kako na slučajan način generirati problem?}
+\begin{itemize}
+\item<1->
+Graf mora biti povezan.
+\item<2->
+Ne smije biti \emph{pregust}.
+\item<3->
+Na slučajan način generiramo nagrade.
+\end{itemize}
 }
 \frame{
-\frametitle{Implementacija u pythonu}
+\frametitle{Dvije vrste grafova}
+\emph{Gusti}
+\begin{itemize}
+\item
+čvorovi su povezani s relativno malo drugih čvorova
+\item
+većina veza je između čvorova koji su \emph{blizu}
+\item
+čvor može biti povezan s najviše jednim čvorom koji mu nije blizu
+\end{itemize}
+\emph{Dugi}
+\begin{itemize}
+\item
+čvorovi su povezani s nekoliko \emph{najbližih} čvorova
+\item
+\textbf{sve} veze su između čvorova koji su \emph{blizu}
+\end{itemize}
 }
+
 \frame{
 \begin{center}
 \begin{figure}
 \includegraphics[scale=0.5]{slike/pokraj.pdf}
-\caption{Dijagram sa 100 stanja}
+\caption{Gusti graf sa 100 stanja}
 \end{figure}
 \end{center}
 }
@@ -844,11 +863,49 @@ na slučajan način generiramo nagrade
 \begin{center}
 \begin{figure}
 \includegraphics[scale=0.5]{slike/put.pdf}
-\caption{Dijagram sa 100 stanja}
+\caption{Gusti graf sa 100 stanja}
+\end{figure}
+\end{center}
+}
+\frame{
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.8]{slike/benchDugi1.pdf}
+\caption{Dugi graf sa 30 stanja}
+\end{figure}
+\end{center}
+}
+\frame{
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.8]{slike/benchDugi2.pdf}
+\caption{Dugi graf sa 30 stanja}
 \end{figure}
 \end{center}
 }
 \subsection{Testiranja}
+\frame{
+\frametitle{Implementacija u pythonu}
+Zašto python?
+\begin{itemize}
+\item
+sveprisutnost, trivijalna sintaksa, brzo prototipiranje
+\item
+nije nam bio prioritet napraviti brzi program, nego ispitati skalabilnost algoritma
+\item
+integracija sa SAGE-om
+\item
+jako dobro skalira sa sve boljim poznavanjem problema
+\end{itemize}
+}
+\frame{
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.8]{slike/dg.pdf}
+\caption{Usporedba izvršavanja algoritma na različitim tipovima grafa}
+\end{figure}
+\end{center}
+}
 \frame{
 \begin{center}
 \begin{figure}
@@ -872,5 +929,33 @@ na slučajan način generiramo nagrade
 \caption{Broj epizoda u odnosu na vrijednost $\gamma$}
 \end{figure}
 \end{center}
+}
+\section{}
+\frame{
+\frametitle{Daljnji rad}
+\begin{enumerate}
+\item
+Implementacija u nižem programskom jeziku, optimizacija.
+\item
+Paralelizacija? CUDA?
+\item
+Generiranje šireg spektra problema.
+\item
+Python i SAGE implementacija drugih tema iz strojnog učenja.
+\end{enumerate}
+}
+\frame{
+\frametitle{Izvori}
+\begin{itemize}
+\item \emph{Q-Learning By Examples}, Kardi Teknomo, 
+\texttt{\tiny people.revoledu.com/kardi/tutorial/ReinforcementLearning}
+\item \emph{Q-learning}, Wikipedia, \\
+\texttt{\tiny en.wikipedia.org/wiki/Q-learning}
+\item \emph{Reinforcement Learning Toolbox}, 
+\texttt{\tiny www.igi.tugraz.at/ril-toolbox/downloads/index.html}
+\end{itemize}
+}
+\frame{
+Hvala na pa\v{z}nji!
 }
 \end{document}

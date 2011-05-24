@@ -9,4 +9,4 @@
 \beamer@subsectionintoc {3}{2}{Nala\IeC {\v z}enje najkra\IeC {\'c}eg puta}{21}{0}{3}
 \beamer@sectionintoc {4}{Implementacija i rezultati}{31}{0}{4}
 \beamer@subsectionintoc {4}{1}{Generiranje problema}{31}{0}{4}
-\beamer@subsectionintoc {4}{2}{Testiranja}{35}{0}{4}
+\beamer@subsectionintoc {4}{2}{Testiranja}{40}{0}{4}
