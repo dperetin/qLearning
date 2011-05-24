@@ -5,7 +5,7 @@ import sys
 import math
 
 
-def generiraj(size, cilj, tip='gusta', raspon=(0, 0)):
+def Generate(size, cilj, tip='gusta', raspon=(0, 0)):
     """
     size  - broj stanja u dijagramu
     cilj  - index ciljnog cvora, brojeci od nule. Nagrada je automatski postavljena na 100
@@ -73,7 +73,7 @@ def ToString(matrica):
     f = ','.join(map(lambda s: str(s), redak)) + '\n'
 
 
-def AdjMat(matrica):
+def AdjacencyMatrix(matrica):
     """
     Iz matrice generira matricu susjeda koja se moze koristit za crtanje 
     grafova softverima kao sto su SAGE ili Mathematica.
@@ -100,7 +100,7 @@ def dobri(red):
     return ret
 
 
-def parsiraj(cijeliFajl):
+def Parse(cijeliFajl):
     """
     Iz stringa koji sadrzi informacije o dijagramu stanja, koji je spremljen 
     kao niz vrijednosti odvojenih zarezom, a redovi su odvojeni znakom '\n', 
@@ -110,7 +110,7 @@ def parsiraj(cijeliFajl):
     return R
 
 
-def imp(x, n=7):
+def Imp(x, n=7):
     """
     Improved Matrix Print (tm)
     Ispisuje matricu u oku ugodnom formatu.
@@ -182,4 +182,26 @@ def FindPath(Q, poc, kraj):
         put.append(s)
     return put
     
+def main():
+    if len(sys.argv) != 4:
+        print sys.argv[0], 'dat', 'poc', 'cilj'
+        print '\tdat  - ime datoteke u koju je spremljena ulazna matrica'
+        print '\tpoc  - pocetni cvor, moze biti bilo koji'
+        print '\tcilj - ciljni cvor, mora biti u skladu s ulaznom matricom'
+        sys.exit(1)
+  
+    filename = sys.argv[1]
+    poc = int(sys.argv[2])
+    kraj = int(sys.argv[3])
     
+    f = open(filename, 'rU')
+    cijeliFajl = f.read()
+    R = Parse(cijeliFajl)
+    
+    Q = LearnQ(R, 0.8, kraj)
+    P = FindPath(Q, poc, kraj)
+    
+    print ' -> '.join(map(str, P))
+
+if __name__=='__main__':
+    main()
