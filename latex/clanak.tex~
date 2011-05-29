@@ -1,0 +1,242 @@
+%%% LaTeX Template: Two column article
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep to referal to http://www.howtotex.com/ here.
+%%% Date: February 2011
+
+%%% Preamble
+\documentclass[	DIV=calc, paper=a4,fontsize=11pt, twocolumn]{scrartcl}	 				% KOMA-article class
+
+\usepackage{lipsum}													% Package to create dummy text
+\usepackage[utf-8]{inputenc}
+
+\usepackage[croatian]{babel}
+%\usepackage[protrusion=true,expansion=true]{microtype}				% Better typography
+\usepackage{amsmath,amsfonts,amsthm}					            % Math packages
+\usepackage[pdftex]{graphicx}									    % Enable pdflatex
+\usepackage[svgnames]{xcolor}									    % Enabling colors by their 'svgnames'
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}	% Custom captions under/above floats
+\usepackage{epstopdf}												% Converts .eps to .pdf
+\usepackage{subfig}													% Subfigures
+\usepackage{booktabs}												% Nicer tables
+\usepackage{fix-cm}													% Custom fontsizes
+
+\usepackage{algorithmic}
+
+
+%%% Custom sectioning (sectsty package)
+\usepackage{sectsty}												% Custom sectioning (see below)
+\allsectionsfont{%													% Change font of al section commands
+	\usefont{OT1}{phv}{b}{n}%										% bch-b-n: CharterBT-Bold font
+	}
+
+\sectionfont{%														% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%										% bch-b-n: CharterBT-Bold font
+	}
+
+
+
+%%% Headers and footers
+\usepackage{fancyhdr}												% Needed to define custom headers/footers
+	\pagestyle{fancy}												% Enabling the custom headers/footers
+\usepackage{lastpage}	
+
+% Header (empty)
+\lhead{}
+\chead{}
+\rhead{}
+% Footer (you may change this to your own needs)
+\lfoot{\footnotesize Q Learning}
+\cfoot{}
+\rfoot{\footnotesize page \thepage\ of \pageref{LastPage}}	        % "Page 1 of 2"
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+%%% Creating an initial of the very first character of the content
+\usepackage{lettrine}
+\newcommand{\initial}[1]{%
+     \lettrine[lines=3,lhang=0.3,nindent=0em]{
+     				\color{DarkGoldenrod}
+     				{\textsf{#1}}}{}}
+
+
+
+%%% Title, author and date metadata
+\usepackage{titling}												% For custom titles
+
+\newcommand{\HorRule}{\color{DarkGoldenrod}%			            % Creating a horizontal rule
+									  	\rule{\linewidth}{1pt} }
+\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule
+				\fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont
+				}
+\title{Q Learning}					                                % Title of your article goes here
+\posttitle{\par\end{flushleft}\vskip 0.5em}
+
+\preauthor{\begin{flushleft}
+					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}
+\author{Ivan Andro�, Dejan Peretin, Petra Podolski, }				% Author name goes here
+\postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black}
+					PMF - Matemati�ki odsjek, Zagreb 				% Institution of author
+					\par\end{flushleft}\HorRule}
+
+\date{Svibanj 2011.}												
+
+
+%%% Begin document
+\begin{document}
+\maketitle
+\thispagestyle{fancy} 			                                    % Enabling the custom headers/footers for the first page
+% The first character should be within \initial{}
+\initial{Q}Learning je jedna od tehnika u�enja s podr�kom. Agent u�i iz svog iskustva bez u�itelja, tako da ispituje stanje po stanje sve dok ne do�e do cilja. Svaki takav ciklus istra�ivanja jednog stanja naziva se epizoda. Konkretno, agent u�i evaluacijsku funkciju $Q:S\times A\to \mathbb{R}$ gdje je $S$ skup stanja, a $A$ skup akcija. Poduzimaju�i akcije, agent se kre�e iz stanja u stanje, a za svako stanje "dobiva" nagradu (realni broj) koji pokazuje korisnost stanja. Cilj agenta je maksimizirati nagradu. Konvergencija ovog algoritma se mo�e dokazati. Agentu ne mora biti poznat model okoli�a, jer bi se u tom slu�aju mogao iskoristiti neki od br�ih algoritama.
+
+\section*{Opis algoritma Q learning i primjer}
+Zamislimo da imamo robota kojeg moramo nau�iti kako da se kre�e po nekom prostoru npr. stanu koji se sastoji od nekoliko soba i vrata koja i povezuju. Ako se s po�etne to�ke po�ne kretati u proizvoljnom smjeru, velika je vjerojatnost da �e doci do zida i ne�e mo�i dalje. To se mo�e smatrati nepo�eljnijim stanjem nego prolazak kroz vrata u drugu sobu. U�enje bi u tom slu�aju odvijalo tako da se za svaki sudar sa zidom daje minimalna nagrada, a za prolazak kroz vrata ve�a, a za stizanje na cilj najve�a nagrada. Pogledajmo ipak jednostavniji primjer na slici \ref{fig:1}; prikazan je tlocrt stana koji se sastoji od 5 soba i 6 vrata, a zadatak agenta je iza�i van.
+
+\begin{figure}
+\includegraphics[scale=0.4]{slike/soba.pdf}
+\caption{Agent se nalazi u jednoj od soba, mora iza�i van}
+\label{fig:1}
+\end{figure}
+
+Isti problem je prikazan dijagramom na slici \ref{fig:2}.
+Stanja su prikazana krugovima, a akcije koje agenta vode iz stanja u stanje strelicama s te�inama. Inicijalno su sve te�ine postavljene na $0$, osim za one akcije koje agenta vode u ciljno stanje, one imaju te�inu jednaku 100.
+
+\begin{figure}
+\includegraphics[scale=0.6]{slike/R.pdf}
+\caption{Dijagram stanja prethodnog tlocrta}
+\label{fig:2}
+\end{figure}
+
+U algoritmu se koriste dvije $n \times n$ matrice; matricu okoli�a $R$ i matricu u�enja $Q$. Matrica $R$ predstavlja dijagram stanja. Ako su stanja $i$ i $j$ susjedna (povezana), u matrici �e na mjestu $(i, j)$ pisati $0$ (ili u modificiranoj verziji programa, te�ina $\omega \in \mathbb{R}$), ako se iz stanja $i$ prelazi u stanje $j$ koje je ciljno, u matrici na mjestu $(i, j)$ pisat �e $100$, a ako dva stanja nisu susjedna, vrijednost u matrici bit �e $-\inf$. Matrica $Q$ na po�etku sadr�i $0$ na svim mjestima.
+
+
+\subsection*{Pseudokod u�enja funkcije Q}
+\begin{algorithmic}
+\STATE u�itaj parametar $\gamma$ i matricu $R$
+\STATE inicijaliziraj vrijednosti matrice $Q$ na 0
+\WHILE{nema konvergencije}
+\STATE na slu�ajan na�in izaberi inicijalno stanje
+\WHILE{nismo u zavr�nom stanju}
+\STATE izaberi jedno od mogu�ih akcija za trenutno stanje
+\STATE $Q_{s, a} = R_{s, a}+\gamma \cdot \max_i\{Q_{a, a_i}\}$
+\STATE postavi sljede�e stanje za trenutno stanje
+\ENDWHILE
+\ENDWHILE
+\end{algorithmic}
+
+Pomo�u ovog algoritma agent u�i iz svog iskustva tj. treninga. U svakoj epizodi agent istra�uje svoj okoli� (matrica $R$) i (ne) dobiva nagradu ako (ne) do�e do cilja. �to dulje u�i (tj. �to vi�e epizoda izvede), bolje �e upoznati svoj okoli� i vi�e nau�iti (tj. na�i �e to�niju matricu $Q$).
+Parametar $\gamma$ je unaprijed izabrana vrijednost izme�u $0$ i $1$. Vi�e o zna�enju parametra $\gamma$ kasnije je obja�njeno uz sliku \ref{fig:5}.
+
+Kad je $Q$ matrica zavr�ena, iz nje je lako pro�itati slijed akcija koji daje najbr�i put od nekog po�etnog do ciljnog stanja.
+
+\subsection*{Pseudokod nala�enja najkra�eg puta}
+\begin{algorithmic}
+\STATE u�itaj matricu $Q$ i po�etno stanje
+\WHILE{trenutno stanje != finalno stanje}
+\STATE za trenutno stanje na�i akciju koja ima najve�u vrijednost u matrici $Q$
+\STATE za trenutno stanje odaberi ono stanje u koje vodi prethodno odabrana akcija
+\ENDWHILE
+\end{algorithmic}
+
+\begin{figure}
+\includegraphics[scale=0.6]{slike/Q.pdf}
+\caption{Dijagram stanja iz perspektive funkcije $Q$}
+\end{figure}
+
+
+\section*{Implementacija}
+Q learning smo implementirali u programskom jeziku python. Za�to python? Jezik python stvoren je s ciljem lake �itljivosti, velike snage s jednostavnom sintaksa, �to omogu�uje brzo prototipiranje.
+Cilj ovog projekta nije bio napraviti jako brzi program, nego ispitati skalabilnost algoritma. Dodatne prednosti pythona su mogu�nost integracije sa matemati�kim softverom SAGE te vrlo dobro skaliranje sa sve boljim poznavanjem problema.
+
+\subsection*{Generiranje grafova}
+Kreiranje algoritam za slu�ajno generiranje problema - grafova je jednako (ako ne i vi�e) te�ak problem od samog Q learning algoritma. To �to komplicira problem su uvjeti koje tra�eni graf mora zadovoljavati:
+\begin{itemize}
+\item
+Mora biti povezan.
+\item
+Ne smije biti \emph{pregust}.
+\item
+Na slu�ajan na�in generiramo nagrade.
+\end{itemize}
+
+Da bismo mogli bolje analizirati dobivene rezultate, stvorili smo dvije vrste grafova, nazvali smo ih \emph{gusti} i \emph{dugi}.
+
+U gustim grafovima �vorovi su povezani s relativno malo drugih �vorova. Ve�ina veza je izme�u �vorova koji su \emph{blizu} te
+�vor mo�e biti povezan s najvi�e jednim �vorom koji mu nije blizu.
+
+U dugim grafovima �vorovi su povezani s nekoliko \emph{najbli�ih} �vorova, dakle sve veze su izme�u �vorova koji su \emph{blizu}.
+
+
+\section*{Kori�tenje programa}
+Program se sastoji od sljede�ih funkcija:
+
+\emph{Generate(size, cilj, tip='gusta', raspon=(0, 0))}
+\begin{itemize}
+\item    $size$  - broj stanja u dijagramu
+\item    $cilj$  - index ciljnog �vora, broje�i od 0. Nagrada je automatski postavljena na 100.
+\item    $tip$   - tip matrice koja se generira.
+Default vrijednost je 'gusta' - stanja mogu biti povezana sa svim stanjima, ali je mala vjerojatnost da bude povezana sa stanjima koja su daleko. Druga mogu�nost je 'duga' - stanja mogu biti povezana samo sa nekoliko najblizih stanja
+\item    raspon - ure�en par cijelih brojeva $(a, b)$, vrijednosti matrice $a$ su iz segmenta $[a, b]$
+\end{itemize}
+Funkcija vra�a matricu nagrada sljede�eg formata:
+\begin{itemize}
+\item         - ako stanja $x$ i $y$ nisu spojena, $m(x, y) = -inf$
+\item         - ako jesu spojena, $m(x, y) = z \in [a, b]$
+\end{itemize}
+
+\emph{ToString(matrica)}
+   Sprema matricu u jedan string, redovi su odvojeni znakom '\textbackslash n', 
+   a elementi reda zarezom.
+
+\emph{AdjacencyMatrix(matrica)}
+    Iz matrice generira matricu susjedstva koja se mo�e koristiti za crtanje grafova softverom kao �to je SAGE ili Mathematica.
+
+\emph{Parse(cijeliFajl)}
+    Iz stringa koji sadr�i informacije o dijagramu stanja, koji je spremljen kao niz vrijednosti odvojenih zarezom, a redovi su odvojeni znakom '\textbackslash n', 
+    generira se matrica koja se mo�e koristiti za u�enje.
+
+\emph{Imp(x, n=7)}
+
+    Improved Matrix Print (tm) - Ispisuje matricu u oku ugodnom formatu.
+
+\emph{LearnQ(R, gamma, kraj, bench=False)}
+    Vra�a matricu $Q$. Pri tomu je:
+\begin{itemize}
+\item    $R$     - matrica nagrada,
+\item    $gamma$ - koeficijent,
+\item    $kraj$  - ciljni �vor, broje�i od 0,
+\item    $bench$ - False (default) ili True - uz matricu $Q$ vra�a i broj izvr�enih epizoda i broj koraka algoritma kao ure�enu trojku
+\end{itemize}
+
+\emph{FindPath(Q, poc, kraj)}
+    Vra�a listu �vorova koji tvore najkra�i put od �vora $poc$ do �vora $kraj$, prema matrici $Q$.
+
+
+\section*{Rezultati i zaklju�ak}
+Na slici \ref{fig:3} vidimo odnos broja koraka algoritma s obzirom na broj stanja. Taj odnos je o�ekivano pribli�no linearan. Mjerenja su izvr�ena tako da se za svaki fiksirani broj stanja generiralo 10 grafova i onda se uzela aritmeti�ka sredina broja koraka od tih 10 slu�ajeva. Ovdje treba napomenuti da ti brojevi dosta variraju jer se po�eci epizoda algoritma biraju na slu�ajan na�in, pa se obzirom na odabir, algoritam mo�e zavr�iti i puno br�e, ali i puno sporije. To je tako�er razlog za�to ne mo�emo analizom algoritma (brojanjem koraka) odrediti njegovu slo�enost.
+
+\begin{figure}
+\includegraphics[scale=0.8]{slike/bench1.pdf}
+\caption{Broj koraka algoritma u odnosu na broj stanja}
+\label{fig:3}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.8]{slike/bench2.pdf}
+\caption{Broj epizoda u odnosu na broj stanja}
+\label{fig:4}
+\end{figure}
+
+Slika \ref{fig:4} nam pokazuje broj epizoda u odnosu na broj stanja. Obja�njenje?
+
+Slika \ref{fig:5} pokazuje broj epizoda u odnosu na vrijednost $\gamma$. Ako je vrijednost parametra $\gamma$ bli�a $0$ agent vi�e preferira veliku nagradu odmah nakon izbora svake akcije, a ako je bli�a $1$, agent je spreman pri�ekati da bi kasnije dobio ve�u nagradu. Kad bi $\gamma$ bila jednaka $1$, matrica $Q$ ne bi konvergirala.
+
+\begin{figure}
+\includegraphics[scale=0.8]{slike/bench3.pdf}
+\caption{Broj epizoda u odnosu na vrijednost $\gamma$}
+\label{fig:5}
+\end{figure}
+
+\end{document} 
